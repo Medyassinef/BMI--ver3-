@@ -1,0 +1,13 @@
+{
+    "language": "العربية",
+    "selectLanguage": "اختر اللغة",
+    "login": "تسجيل الدخول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "signIn": "تسجيل الدخول",
+    "bmiCalculator": "حاسبة مؤشر كتلة الجسم",
+    "height": "الطول",
+    "weight": "الوزن",
+    "calculate": "احسب",
+    "result": "النتيجة"
+}

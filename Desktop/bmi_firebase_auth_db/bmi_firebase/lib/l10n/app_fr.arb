@@ -1,0 +1,13 @@
+{
+    "language": "Français",
+    "selectLanguage": "Choisir la langue",
+    "login": "Connexion",
+    "email": "Email",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "bmiCalculator": "Calculateur d'IMC",
+    "height": "Taille",
+    "weight": "Poids",
+    "calculate": "Calculer",
+    "result": "Résultat"
+}

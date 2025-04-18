@@ -1,0 +1,13 @@
+{
+    "language": "English",
+    "selectLanguage": "Select Language",
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "bmiCalculator": "BMI Calculator",
+    "height": "Height",
+    "weight": "Weight",
+    "calculate": "Calculate",
+    "result": "Result"
+}
