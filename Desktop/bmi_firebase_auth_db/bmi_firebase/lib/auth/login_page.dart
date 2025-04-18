@@ -47,8 +47,35 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final languageProvider = Provider.of<LanguageProvider>(context);
+    final languages = Language.languageList();
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
+        appBar: AppBar(
+          title: Text(AppLocalizations.of(context)!.login),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: DropdownButton<String>(
+                value: languageProvider.currentLocale.languageCode,
+                icon: const Icon(Icons.language, color: Colors.white),
+                style: const TextStyle(color: Colors.white),
+                dropdownColor: Theme.of(context).primaryColor,
+                underline: Container(),
+                onChanged: (String? newValue) {
+                  if (newValue != null) {
+                    languageProvider.changeLocale(newValue);
+                  }
+                },
+                items: languages.map<DropdownMenuItem<String>>((Language language) {
+                  return DropdownMenuItem<String>(
+                    value: language.languageCode,
+                    child: Text(language.name),
+                  );
+                }).toList(),
+              ),
+            ),
+          ],
+        ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
