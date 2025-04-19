@@ -9,5 +9,17 @@
     "height": "الطول",
     "weight": "الوزن",
     "calculate": "احسب",
-    "result": "النتيجة"
+    "result": "النتيجة",
+    "pleaseEnterWeight": "الرجاء إدخال وزنك",
+    "pleaseEnterValidNumber": "الرجاء إدخال رقم صحيح",
+    "pleaseEnterHeight": "الرجاء إدخال طولك",
+    "calculateBmi": "حساب مؤشر كتلة الجسم",
+    "reset": "إعادة تعيين",
+    "reportYourData": "أدخل بياناتك",
+    "belowWeight": "نقص في الوزن",
+    "idealWeight": "وزن مثالي",
+    "slightlyOverweight": "زيادة طفيفة في الوزن",
+    "obesityGrade1": "سمنة من الدرجة الأولى",
+    "obesityGrade2": "سمنة من الدرجة الثانية",
+    "obesityGrade3": "سمنة من الدرجة الثالثة"
 }

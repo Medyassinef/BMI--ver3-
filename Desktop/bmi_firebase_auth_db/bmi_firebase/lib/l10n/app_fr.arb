@@ -9,5 +9,17 @@
     "height": "Taille",
     "weight": "Poids",
     "calculate": "Calculer",
-    "result": "Résultat"
+    "result": "Résultat",
+    "pleaseEnterWeight": "Veuillez entrer votre poids",
+    "pleaseEnterValidNumber": "Veuillez entrer un nombre valide",
+    "pleaseEnterHeight": "Veuillez entrer votre taille",
+    "calculateBmi": "Calculer l'IMC",
+    "reset": "Réinitialiser",
+    "reportYourData": "Saisissez vos données",
+    "belowWeight": "Poids insuffisant",
+    "idealWeight": "Poids idéal",
+    "slightlyOverweight": "Léger surpoids",
+    "obesityGrade1": "Obésité de grade I",
+    "obesityGrade2": "Obésité de grade II",
+    "obesityGrade3": "Obésité de grade III"
 }

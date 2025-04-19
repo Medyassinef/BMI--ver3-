@@ -95,10 +95,10 @@ class _BmiCalculatorState extends State<BmiCalculator> {
               style: const TextStyle(fontSize: 24, color: Colors.green),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return "Please enter your weight";
+                  return AppLocalizations.of(context)!.pleaseEnterWeight;
                 }
                 if (double.tryParse(value) == null) {
-                  return "Please enter a valid number";
+                  return AppLocalizations.of(context)!.pleaseEnterValidNumber;
                 }
                 return null;
               },
@@ -115,10 +115,10 @@ class _BmiCalculatorState extends State<BmiCalculator> {
               style: const TextStyle(fontSize: 24, color: Colors.green),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return "Please enter your height";
+                  return AppLocalizations.of(context)!.pleaseEnterHeight;
                 }
                 if (double.tryParse(value) == null) {
-                  return "Please enter a valid number";
+                  return AppLocalizations.of(context)!.pleaseEnterValidNumber;
                 }
                 return null;
               },
@@ -129,7 +129,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
               ),
-              child: const Text("Calculate BMI", style: TextStyle(fontSize: 18)),
+              child: Text(AppLocalizations.of(context)!.calculateBmi, style: const TextStyle(fontSize: 18)),
             ),
             const SizedBox(height: 20),
             BmiGauge(bmiValue: _bmiValue),
@@ -142,7 +142,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
             const SizedBox(height: 20),
             OutlinedButton(
               onPressed: _resetFields,
-              child: const Text("Reset"),
+              child: Text(AppLocalizations.of(context)!.reset),
             ),
           ],
         ),
