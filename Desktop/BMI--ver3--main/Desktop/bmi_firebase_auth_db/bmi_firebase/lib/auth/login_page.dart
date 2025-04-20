@@ -85,11 +85,11 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               TextFormField(
                 controller: _emailController,
-                decoration: const InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(labelText: AppLocalizations.of(context)!.email),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter your email';
+                    return AppLocalizations.of(context)!.email;
                   }
                   return null;
                 },
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 16),
               TextFormField(
                 controller: _passwordController,
-                decoration: const InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(labelText: AppLocalizations.of(context)!.password),
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -111,7 +111,9 @@ class _LoginPageState extends State<LoginPage> {
                   ? const CircularProgressIndicator()
                   : ElevatedButton(
                 onPressed: _login,
-                child: const Text('Login'),
+                child: _isLoading
+                    ? const CircularProgressIndicator()
+                    : Text(AppLocalizations.of(context)!.login),
               ),
               TextButton(
                 onPressed: () {
@@ -122,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   );
                 },
-                child: const Text('Don\'t have an account? Register'),
+                child: Text(AppLocalizations.of(context)!.signIn),
               ),
             ],
           ),

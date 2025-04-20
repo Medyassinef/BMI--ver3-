@@ -66,12 +66,12 @@ class _BmiCalculatorState extends State<BmiCalculator> {
   }
 
   String _getBmiCategory(double bmi) {
-    if (bmi < 18.6) return "Below weight";
-    if (bmi < 24.9) return "Ideal weight";
-    if (bmi < 29.9) return "Slightly Overweight";
-    if (bmi < 34.9) return "Obesity Grade I";
-    if (bmi < 39.9) return "Obesity Grade II";
-    return "Obesity Grade III";
+    if (bmi < 18.6) return AppLocalizations.of(context)!.belowWeight;
+    if (bmi < 24.9) return AppLocalizations.of(context)!.idealWeight;
+    if (bmi < 29.9) return AppLocalizations.of(context)!.slightlyOverweight;
+    if (bmi < 34.9) return AppLocalizations.of(context)!.obesityGrade1;
+    if (bmi < 39.9) return AppLocalizations.of(context)!.obesityGrade2;
+    return AppLocalizations.of(context)!.obesityGrade3;
   }
 
   @override
@@ -88,9 +88,9 @@ class _BmiCalculatorState extends State<BmiCalculator> {
             TextFormField(
               controller: _weightController,
               keyboardType: TextInputType.numberWithOptions(decimal: true),
-              decoration: const InputDecoration(
-                labelText: "Weight (kg)",
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                labelText: "${AppLocalizations.of(context)!.weight} (kg)",
+                border: const OutlineInputBorder(),
               ),
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 24, color: Colors.green),
@@ -108,9 +108,9 @@ class _BmiCalculatorState extends State<BmiCalculator> {
             TextFormField(
               controller: _heightController,
               keyboardType: TextInputType.numberWithOptions(decimal: true),
-              decoration: const InputDecoration(
-                labelText: "Height (cm)",
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                labelText: "${AppLocalizations.of(context)!.height} (cm)",
+                border: const OutlineInputBorder(),
               ),
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 24, color: Colors.green),
